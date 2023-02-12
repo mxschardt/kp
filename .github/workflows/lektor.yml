@@ -29,7 +29,7 @@ jobs:
       - name: Install Lektor
         run: pip install lektor
       - name: Build Project
-        run: lektor build
+        run: lektor build --output-path _site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
   
