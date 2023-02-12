@@ -1,0 +1,8 @@
+[project]
+name = Lab1
+
+[server.ghpages]
+target = ghpages://mxschardt/kp
+name = GitHubPages
+default = yes
+enabled = yes
