@@ -30,6 +30,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Build Project
         run: lektor build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./public
   
   deploy:
     environment:
