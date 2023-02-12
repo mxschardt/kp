@@ -24,16 +24,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
+      - name: Checkout
+        uses: actions/checkout@v3    
       - name: Install Lektor
         run: pip install lektor
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Build Project
         run: lektor build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-        with:
-          path: "${{ lektor project-info --output-path }}"
   
   deploy:
     environment:
