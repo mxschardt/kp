@@ -26,6 +26,8 @@ jobs:
     steps: 
       - name: Install Lektor
         run: pip install lektor
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Build Project
         run: lektor build
   
