@@ -27,7 +27,7 @@ jobs:
       - name: Install Lektor
         run: pip install lektor
       - name: Build Project
-        run: lektor build --output-path "${{ steps.deployment.outputs.page_url }}"
+        run: lektor build --output-path ./public
   
   deploy:
     environment:
