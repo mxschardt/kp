@@ -33,7 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ${{ lektor project-info --output-path }}
+          path: "${{ lektor project-info --output-path }}"
   
   deploy:
     environment:
